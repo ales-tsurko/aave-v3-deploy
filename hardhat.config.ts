@@ -1,4 +1,5 @@
 import {
+    atletaNetworkSettings,
   DETERMINISTIC_DEPLOYMENT,
   DETERMINISTIC_FACTORIES,
   ETHERSCAN_KEY,
@@ -63,8 +64,8 @@ export default {
   networks: {
     hardhat: hardhatNetworkSettings,
     localhost: {
-      url: "http://127.0.0.1:8545",
-      ...hardhatNetworkSettings,
+      url: "http://127.0.0.1:9944",
+      ...atletaNetworkSettings,
     },
     tenderly: getCommonNetworkConfig("tenderly", 1),
     main: getCommonNetworkConfig(eEthereumNetwork.main, 1),

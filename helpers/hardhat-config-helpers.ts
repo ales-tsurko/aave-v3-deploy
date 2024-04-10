@@ -191,6 +191,28 @@ export const hardhatNetworkSettings = {
       : undefined,
 };
 
+export const atletaNetworkSettings = {
+  gasPrice: "auto",
+  initialBaseFeePerGas: "0",
+  blockGasLimit: DEFAULT_BLOCK_GAS_LIMIT,
+  throwOnTransactionFailures: true,
+  throwOnCallFailures: true,
+  chainId: 2340,
+  forking: buildForkConfig(),
+  saveDeployments: true,
+  allowUnlimitedContractSize: true,
+  tags: ["local"],
+  accounts:
+    FORK && !!MNEMONIC
+      ? {
+          mnemonic: MNEMONIC,
+          path: MNEMONIC_PATH,
+          initialIndex: 0,
+          count: 10,
+        }
+      : undefined,
+};
+
 export const DETERMINISTIC_FACTORIES = {
   "1": {
     funding: "2500000000000000",
